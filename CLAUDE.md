@@ -17,6 +17,10 @@ Gestart 19 november 2026. Eigenaar: Peter (PC1PM). Taal van site en communicatie
 - **Tweetalig:** Nederlands in de root, Engels in `en/` (`en/index.html`, `en/hobby.html`, paden met `../`).
   Elke pagina heeft een NL- én EN-versie; wijzig ze altijd samen. De NL|EN-schakelaar linkt naar de
   tegenhanger van dezelfde pagina; ook `hreflang`-links in de `<head>` bijwerken bij nieuwe pagina's.
+- Ruimteweer-widget op de hobbypagina's: `js/spaceweather.js` (NL/EN via `<html lang>`), haalt live data
+  rechtstreeks uit NOAA SWPC (CORS open; hamqsl.com en prop.kc2g.com hebben géén CORS). Wereldkaart
+  `img/web/world-land.svg` komt uit `tools/make_worldmap.py` (Natural Earth 110m). Bandcondities zijn een
+  eigen schatting op basis van SFI en Kp, en zo gelabeld.
 - Peter wil geen contest-tijdlijn en geen kerncijfers-blok (DXCC/2016/3×) op de homepage (bewust verwijderd).
 - Hoofdfoto = `img/hoofdfoto1.png` (door Peter bewerkt aangeleverd); het script snijdt daar alleen hero,
   portret en OG-beeld uit, zonder extra kleurcorrectie.

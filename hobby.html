@@ -229,11 +229,10 @@
     <p class="kicker">07 · Nu in de lucht</p>
     <h2>Condities &amp; activiteit</h2>
     <p class="lead">Zo staan de banden er op dit moment voor, en hier pikte het Reverse Beacon Network mijn signaal op.</p>
-    <div class="live">
-      <figure class="live__item">
-        <figcaption>Bandcondities</figcaption>
-        <a href="https://www.hamqsl.com/solar.html" rel="noopener"><img src="https://www.hamqsl.com/solarmuf.php" alt="Actuele bandcondities en zonne-activiteit van hamqsl.com" loading="lazy"></a>
-      </figure>
+    <div class="sw" data-sw data-map="img/web/world-land.svg">
+      <p class="muted">Live ruimteweer van NOAA wordt geladen… (JavaScript nodig)</p>
+    </div>
+    <div class="live live--single">
       <figure class="live__item">
         <figcaption>Mijn activiteit op het Reverse Beacon Network</figcaption>
         <a href="https://rbn.telegraphy.de/activity/PC1PM" rel="noopener"><img src="https://rbn.telegraphy.de/activity/image/PC1PM" alt="RBN-activiteit van PC1PM" loading="lazy"></a>
@@ -264,5 +263,6 @@
   </div>
 </footer>
 
+<script src="js/spaceweather.js" defer></script>
 </body>
 </html>
