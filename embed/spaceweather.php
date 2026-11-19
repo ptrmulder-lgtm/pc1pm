@@ -258,7 +258,8 @@ $out[] = '<rect x=".5" y=".5" width="' . (W - 1) . '" height="' . ($H - 1) . '" 
 $out[] = '<text x="24" y="34" font-family="' . e($MONO) . '" font-size="13" font-weight="700" letter-spacing="1.5" fill="' . $C['accent'] . '">' . e($T['title']) . '</text>';
 $summary = ($sfi !== null && $kp !== null) ? $T['summary']($sfi, $kp) : $T['nodata'];
 $out[] = '<text x="24" y="58" font-family="' . e($SANS) . '" font-size="15" fill="' . $C['text'] . '">' . e($summary) . '</text>';
-$out[] = '<circle cx="' . (W - 168) . '" cy="30" r="4" fill="' . $C['good'] . '"/>';
+$updTxt = $T['updated'] . ' ' . gmdate('H:i', $now) . ' UTC';
+$out[] = '<circle cx="' . (int) (W - 24 - strlen($updTxt) * 6.1 - 10) . '" cy="30" r="4" fill="' . $C['good'] . '"/>';
 $out[] = '<text x="' . (W - 24) . '" y="34" text-anchor="end" font-family="' . e($MONO) . '" font-size="11" fill="' . $C['muted'] . '">' . e($T['updated']) . ' ' . gmdate('H:i', $now) . ' UTC</text>';
 
 // kaart
@@ -270,11 +271,11 @@ $out[] = '<text x="' . $mx . '" y="' . ($my - 10) . '" font-family="' . e($MONO)
 $out[] = '<text x="' . ($mx + $mw) . '" y="' . ($my - 10) . '" text-anchor="end" font-family="' . e($SANS) . '" font-size="11.5" font-weight="600" fill="' . $C['accent'] . '">' . e($isDay ? $T['dayHere'] : $T['nightHere']) . '</text>';
 $out[] = '<clipPath id="mapclip"><rect x="' . $mx . '" y="' . $my . '" width="' . $mw . '" height="' . $mh . '" rx="8"/></clipPath>';
 $out[] = '<g clip-path="url(#mapclip)">';
-$out[] = '<rect x="' . $mx . '" y="' . $my . '" width="' . $mw . '" height="' . $mh . '" fill="#12303b"/>';
+$out[] = '<rect x="' . $mx . '" y="' . $my . '" width="' . $mw . '" height="' . $mh . '" fill="#18404e"/>';
 if ($land) {
     $out[] = '<path transform="translate(' . $mx . ' ' . $my . ') scale(' . ($mw / 360) . ' ' . ($mh / 180) . ')" d="' . $land . '" fill="#2c3b43" stroke="#3b4e58" stroke-width=".3" fill-rule="evenodd"/>';
 }
-foreach ([[0, .28], [-6, .16], [-12, .14], [-18, .14]] as [$hh, $op]) {
+foreach ([[0, .34], [-6, .2], [-12, .17], [-18, .17]] as [$hh, $op]) {
     $out[] = '<path d="' . nightPath((float) $hh, $sLat, $sLon, $mx, $my, $mw, $mh) . '" fill="#060a14" fill-opacity="' . $op . '"/>';
 }
 $term = terminatorLine($sLat, $sLon, $mx, $my, $mw, $mh);
