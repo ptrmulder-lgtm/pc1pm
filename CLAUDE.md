@@ -32,7 +32,7 @@ Gestart 19 november 2026. Eigenaar: Peter (PC1PM). Taal van site en communicatie
   via de lokale server. Wijzigen = bron aanpassen, Peter laten kijken, dan pas in de QRZ-editor
   (CKEditor `qrzbio`) zetten en op Save; QRZ bewaart vorige versies. `/qrz/` is op de site afgeschermd.
 - **Software-pagina** (`software.html`, `en/software.html`): Mz Cw Reader (`C:\001WerkMap\cw-reader`) en
-  QSO Master Pro CW (`qsoprocw*`, functielijst nog door Peter te bevestigen). Workflow media: Peter zet ruwe
+  QSO Master Pro CW (`qsoprocw*`; functies door Peter bevestigd: IC-7300 + CAT, QRZ.com-logging en call-info, CW/RTTY/SSB met spraakmacro's, DX-spots in het spectrum, contestversie met F-toetsen). Workflow media: Peter zet ruwe
   bestanden in `media-inbox/<app>/` (gitignored, zie LEESMIJ.txt) → `python tools/process_media.py` (Pillow +
   ffmpeg) maakt `img/software/<app>/*.webp` (+ `-thumb`) en `video/<app>/*.mp4/.webm/-poster.jpg` (stil, ≤1280 px,
   ≤30 s, ≤8 MB). Lange demo's met geluid gaan op YouTube. In de HTML vervang je de blokken tussen
