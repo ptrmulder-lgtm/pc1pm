@@ -17,7 +17,9 @@ Gestart 19 november 2026. Eigenaar: Peter (PC1PM). Taal van site en communicatie
 - **Tweetalig:** Nederlands in de root, Engels in `en/` (`en/index.html`, `en/hobby.html`, paden met `../`).
   Elke pagina heeft een NL- én EN-versie; wijzig ze altijd samen. De NL|EN-schakelaar linkt naar de
   tegenhanger van dezelfde pagina; ook `hreflang`-links in de `<head>` bijwerken bij nieuwe pagina's.
-- Ruimteweer-widget op de hobbypagina's: `js/spaceweather.js` (NL/EN via `<html lang>`), haalt live data
+- **Cache:** CSS/JS-links hebben `?v=…` (bijv. `css/style.css?v=20261119b`). Bij elke wijziging in CSS of JS
+  dat versienummer in álle vier pagina's ophogen, anders zien bezoekers tot een uur lang oude opmaak bij nieuwe HTML.
+- Ruimteweer-widget op homepage (onder "Over mij") en hobbypagina's: `js/spaceweather.js` (NL/EN via `<html lang>`), haalt live data
   rechtstreeks uit NOAA SWPC (CORS open; hamqsl.com en prop.kc2g.com hebben géén CORS). Wereldkaart
   `img/web/world-land.svg` komt uit `tools/make_worldmap.py` (Natural Earth 110m). Bandcondities zijn een
   eigen schatting op basis van SFI en Kp, en zo gelabeld.
