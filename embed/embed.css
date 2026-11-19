@@ -1,0 +1,17 @@
+/* Embed-variant van de ruimteweer-widget (iframe op o.a. QRZ.com).
+   Doel: compact en vaste hoogte rond 870 px breed, zodat een iframe van ±1000 px past. */
+html, body { background: transparent; margin: 0; }
+body { padding: 0; font-size: 16px; }
+.sw { margin: 0; }
+
+/* Tweekoloms opbouw ook bij smallere iframes houden (QRZ-bio is ±870 px). */
+@media (max-width: 960px) and (min-width: 641px) {
+  .sw-grid { grid-template-columns: 1.4fr 1fr; grid-template-areas: "map bands" "tiles tiles" "kp kp"; }
+  .sw-tiles { grid-template-columns: repeat(4, 1fr); }
+}
+.sw-bands th, .sw-bands td { padding: 4px 8px; }
+.sw-kpbars { height: 90px; }
+
+.embed-credit { margin: 6px 4px 0; text-align: right; font: 500 .72rem var(--mono); }
+.embed-credit a { color: #6b7a83; text-decoration: none; }
+.embed-credit a:hover { color: var(--accent); }

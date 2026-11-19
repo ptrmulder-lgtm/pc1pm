@@ -296,8 +296,8 @@
           '<p class="sw-note">' + t.bandNote + "</p>" +
         "</div>" +
       "</div>" +
-      '<p class="sw-source"><a href="https://www.swpc.noaa.gov/" rel="noopener">' + t.source + "</a>" +
-        (helpHref ? '<a class="sw-help" href="' + helpHref + '">' + t.help + "</a>" : "") + "</p>";
+      '<p class="sw-source"><a href="https://www.swpc.noaa.gov/" target="_blank" rel="noopener">' + t.source + "</a>" +
+        (helpHref ? '<a class="sw-help" href="' + helpHref + '"' + (/^https?:/.test(helpHref) ? ' target="_blank" rel="noopener"' : "") + ">" + t.help + "</a>" : "") + "</p>";
 
     function tile(key, label, sub) {
       return '<div class="sw-tile" data-tile="' + key + '"><p class="sw-label">' + label + (sub ? " <span>· " + sub + "</span>" : "") +
