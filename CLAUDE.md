@@ -23,6 +23,10 @@ Gestart 19 november 2026. Eigenaar: Peter (PC1PM). Taal van site en communicatie
   rechtstreeks uit NOAA SWPC (CORS open; hamqsl.com en prop.kc2g.com hebben géén CORS). Wereldkaart
   `img/web/world-land.svg` komt uit `tools/make_worldmap.py` (Natural Earth 110m). Bandcondities zijn een
   eigen schatting op basis van SFI en Kp, en zo gelabeld.
+- **QRZ.com draait de bio in een sandbox zonder scripts**: een iframe met de JS-widget werkt daar niet
+  (geprobeerd en teruggedraaid). Daarvoor is er `embed/spaceweather.php?lang=en|nl`: dezelfde widget als
+  server-side SVG-afbeelding (PHP, cache 10 min in `/.cache`, afgeschermd door .htaccess). Bandschatting en
+  teksten staan dubbel (JS + PHP): wijzig ze samen. `embed/*.html` = iframe-versie voor plekken mét JS.
 - Peter wil geen contest-tijdlijn en geen kerncijfers-blok (DXCC/2016/3×) op de homepage (bewust verwijderd).
 - Hoofdfoto = `img/hoofdfoto1.png` (door Peter bewerkt aangeleverd); het script snijdt daar alleen hero,
   portret en OG-beeld uit, zonder extra kleurcorrectie.
