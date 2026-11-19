@@ -389,3 +389,4 @@ figcaption { color: var(--muted); font-size: .9rem; margin-top: 10px; }
 .clip-fig { margin: 28px 0 0; }
 .clip-fig .clip { margin: 0; }
 .clip-fig figcaption { margin-top: 10px; }
+.clip-fig .yt { margin-top: 0; }
