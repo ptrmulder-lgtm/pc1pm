@@ -1,4 +1,12 @@
 # pc1pm.nl – Apache-instellingen
+
+# www.pc1pm.nl -> https://pc1pm.nl (permanent, pad en query blijven behouden)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.pc1pm\.nl$ [NC]
+  RewriteRule ^ https://pc1pm.nl%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 # Plesk zet de hele GitHub-repository in de websitemap. Werkbestanden die niet
 # bij de website horen, geven daarom een 404.
 
