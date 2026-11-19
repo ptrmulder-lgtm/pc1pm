@@ -10,7 +10,7 @@
 # Plesk zet de hele GitHub-repository in de websitemap. Werkbestanden die niet
 # bij de website horen, geven daarom een 404.
 
-RedirectMatch 404 ^/(\.[^/]+|tools)(/.*)?$
+RedirectMatch 404 ^/(\.[^/]+|tools|qrz)(/.*)?$
 RedirectMatch 404 ^/CLAUDE\.md$
 
 # Geen mappenoverzicht tonen

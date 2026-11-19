@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>QRZ bio preview</title>
+<style>
+  body { margin: 0; background: #e9eef3; font-family: Arial, sans-serif; }
+  .qrz { max-width: 870px; margin: 20px auto; background: #fff; padding: 16px; border: 1px solid #c9d3dd; }
+</style>
+</head>
+<body>
+<!-- Lokale voorvertoning van bio-en.html zoals hij in de QRZ-bio staat (wit vlak van ±870 px). -->
+<div class="qrz" id="bio">Laden…</div>
+<script>
+fetch('bio-en.html').then(r => r.text()).then(h => {
+  document.getElementById('bio').innerHTML = h.replace(/src="\/hampages\//g, 'src="https://www.qrz.com/hampages/');
+});
+</script>
+</body>
+</html>
