@@ -27,6 +27,10 @@ Gestart 19 november 2026. Eigenaar: Peter (PC1PM). Taal van site en communicatie
   (geprobeerd en teruggedraaid). Daarvoor is er `embed/spaceweather.php?lang=en|nl`: dezelfde widget als
   server-side SVG-afbeelding (PHP, cache 10 min in `/.cache`, afgeschermd door .htaccess). Bandschatting en
   teksten staan dubbel (JS + PHP): wijzig ze samen. `embed/*.html` = iframe-versie voor plekken mét JS.
+- **QRZ-bio** (qrz.com/db/PC1PM) is in de huisstijl van pc1pm.nl; de bron staat in `qrz/bio-en.html`
+  (alleen inline styles, geen JS; `/hampages/...` zijn Peters QRZ-foto's). Voorvertonen: `qrz/preview.html`
+  via de lokale server. Wijzigen = bron aanpassen, Peter laten kijken, dan pas in de QRZ-editor
+  (CKEditor `qrzbio`) zetten en op Save; QRZ bewaart vorige versies. `/qrz/` is op de site afgeschermd.
 - Peter wil geen contest-tijdlijn en geen kerncijfers-blok (DXCC/2016/3×) op de homepage (bewust verwijderd).
 - Hoofdfoto = `img/hoofdfoto1.png` (door Peter bewerkt aangeleverd); het script snijdt daar alleen hero,
   portret en OG-beeld uit, zonder extra kleurcorrectie.
