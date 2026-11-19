@@ -10,3 +10,6 @@ __pycache__/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Ruwe opnames/screenshots voor de software-pagina (worden verwerkt door tools/process_media.py)
+media-inbox/

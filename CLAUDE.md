@@ -31,6 +31,14 @@ Gestart 19 november 2026. Eigenaar: Peter (PC1PM). Taal van site en communicatie
   (alleen inline styles, geen JS; `/hampages/...` zijn Peters QRZ-foto's). Voorvertonen: `qrz/preview.html`
   via de lokale server. Wijzigen = bron aanpassen, Peter laten kijken, dan pas in de QRZ-editor
   (CKEditor `qrzbio`) zetten en op Save; QRZ bewaart vorige versies. `/qrz/` is op de site afgeschermd.
+- **Software-pagina** (`software.html`, `en/software.html`): Mz Cw Reader (`C:\001WerkMap\cw-reader`) en
+  QSO Master Pro CW (`qsoprocw*`, functielijst nog door Peter te bevestigen). Workflow media: Peter zet ruwe
+  bestanden in `media-inbox/<app>/` (gitignored, zie LEESMIJ.txt) → `python tools/process_media.py` (Pillow +
+  ffmpeg) maakt `img/software/<app>/*.webp` (+ `-thumb`) en `video/<app>/*.mp4/.webm/-poster.jpg` (stil, ≤1280 px,
+  ≤30 s, ≤8 MB). Lange demo's met geluid gaan op YouTube. In de HTML vervang je de blokken tussen
+  `<!-- MEDIA:<app>:clip|gallery|youtube -->`-markeringen. `js/media.js` regelt de clips (spelen alleen in beeld),
+  de lightbox (`data-lightbox`) en de YouTube-gevel (`.yt[data-yt]`, laadt youtube-nocookie pas na een klik).
+  Op QRZ kunnen video's niet (sandbox): daar alleen screenshots met een link naar de pagina.
 - Peter wil geen contest-tijdlijn en geen kerncijfers-blok (DXCC/2016/3×) op de homepage (bewust verwijderd).
 - Hoofdfoto = `img/hoofdfoto1.png` (door Peter bewerkt aangeleverd); het script snijdt daar alleen hero,
   portret en OG-beeld uit, zonder extra kleurcorrectie.

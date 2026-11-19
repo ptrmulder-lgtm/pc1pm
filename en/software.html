@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software – PC1PM</title>
+  <meta name="description" content="Homebrew radio software by PC1PM: Mz Cw Reader, a CW decoder for Windows, and QSO Master Pro CW for CW, RTTY and contesting.">
+  <link rel="alternate" hreflang="nl" href="https://pc1pm.nl/software.html">
+  <link rel="alternate" hreflang="en" href="https://pc1pm.nl/en/software.html">
+  <link rel="alternate" hreflang="x-default" href="https://pc1pm.nl/software.html">
+  <meta property="og:title" content="Software – PC1PM">
+  <meta property="og:description" content="Mz Cw Reader and QSO Master Pro CW: homebrew software for the shack.">
+  <meta property="og:image" content="https://pc1pm.nl/img/web/og-pc1pm.jpg">
+  <meta property="og:url" content="https://pc1pm.nl/en/software.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20261119g">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="index.html">PC1PM</a>
+    <nav class="nav" aria-label="Main menu">
+      <a href="index.html#about">About me</a>
+      <a href="index.html#station">Station</a>
+      <a href="index.html#contests">Contests</a>
+      <a href="index.html#qsl">QSL</a>
+      <a href="hobby.html">The hobby</a>
+      <a href="software.html" aria-current="page">Software</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language">
+      <a href="../software.html" hreflang="nl" lang="nl">NL</a>
+      <a href="software.html" aria-current="true" lang="en">EN</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head wrap">
+    <p class="kicker">Software</p>
+    <h1>Homebrew radio software</h1>
+    <p class="lead">Besides operating, I enjoy building my own software for the shack. Below are two projects I'm working on, with footage of how they look in practice.</p>
+    <ul class="toc" aria-label="Contents">
+      <li><a href="#cwreader">Mz Cw Reader</a></li>
+      <li><a href="#qsomaster">QSO Master Pro CW</a></li>
+    </ul>
+  </section>
+
+  <!-- ===== MZ CW READER ===== -->
+  <section id="cwreader" class="app wrap">
+    <div class="app__head">
+      <div>
+        <p class="kicker">01 · CW decoder</p>
+        <h2>Mz Cw Reader</h2>
+      </div>
+      <span class="status">In development</span>
+    </div>
+    <p class="app__tagline">A CW decoder for Windows, built as a successor to the classic CwGet. Morse from the sound card turns straight into text, and in the spectrum and waterfall you click a signal to tune to it.</p>
+
+    <!-- MEDIA:cwreader:clip -->
+    <figure class="clip-fig">
+      <div class="clip" style="aspect-ratio:8/3"><video data-clip muted loop playsinline preload="none" poster="../video/cwreader/01-live-decoderen-poster.jpg" width="1280" height="480"><source src="../video/cwreader/01-live-decoderen.mp4" type="video/mp4"><source src="../video/cwreader/01-live-decoderen.webm" type="video/webm"></video></div>
+      <figcaption>Decoded live: a QSO with ON4A on 7.025 MHz, in real time. The app recognises the call sign and country automatically.</figcaption>
+    </figure>
+    <!-- /MEDIA:cwreader:clip -->
+
+    <ul class="features">
+      <li><strong>Sound card, file or demo</strong><span>Live from the sound card, from a WAV, MP3 or FLAC recording, or with a generated practice QSO.</span></li>
+      <li><strong>Tunable filters</strong><span>FIR or IIR filter with adjustable bandwidth around the tone, from very narrow to wide.</span></li>
+      <li><strong>AFC and squelch</strong><span>Follows a drifting signal automatically. Squelch and SNR meter in dB above the noise.</span></li>
+      <li><strong>Spectrum and waterfall</strong><span>See every signal in the passband and click one to tune to it.</span></li>
+      <li><strong>QSO recognition</strong><span>Picks out call, RST, name, QTH, locator and power from the text automatically.</span></li>
+      <li><strong>Logbook and ADIF</strong><span>Keep track of contacts and export them to your own logging program.</span></li>
+    </ul>
+    <p class="muted" style="margin-top:16px">In tests with a synthetic 20 WPM signal it decodes cleanly at +3 dB signal-to-noise ratio (140 Hz filter) and is still readable at 0 dB (30 Hz filter).</p>
+
+    <!-- MEDIA:cwreader:gallery -->
+    <div class="gallery">
+      <a href="../img/software/cwreader/02-overzicht.webp" data-lightbox="cwreader"><img src="../img/software/cwreader/02-overzicht-thumb.webp" alt="Overview of Mz Cw Reader during a QSO" loading="lazy"></a>
+      <a href="../img/software/cwreader/03-waterval-en-tekst.webp" data-lightbox="cwreader"><img src="../img/software/cwreader/03-waterval-en-tekst-thumb.webp" alt="Waterfall and decoded text" loading="lazy"></a>
+      <a href="../img/software/cwreader/04-qso-herkenning.webp" data-lightbox="cwreader"><img src="../img/software/cwreader/04-qso-herkenning-thumb.webp" alt="QSO panel: ON4A recognised as Belgium automatically" loading="lazy" style="object-position:top"></a>
+    </div>
+    <!-- /MEDIA:cwreader:gallery -->
+
+    <!-- MEDIA:cwreader:youtube -->
+    <div class="yt yt--empty"><p>Demo video (with sound) coming soon</p></div>
+    <!-- /MEDIA:cwreader:youtube -->
+  </section>
+
+  <!-- ===== QSO MASTER PRO CW ===== -->
+  <section id="qsomaster" class="app wrap">
+    <div class="app__head">
+      <div>
+        <p class="kicker">02 · CW, RTTY &amp; contest</p>
+        <h2>QSO Master Pro CW</h2>
+      </div>
+      <span class="status">In development</span>
+    </div>
+    <p class="app__tagline">A complete workspace for CW and RTTY: decoding, transmitting and logging on one screen, with a separate edition for contesting.</p>
+
+    <!-- MEDIA:qsomaster:clip -->
+    <div class="clip clip--empty"><p>Short video coming soon</p></div>
+    <!-- /MEDIA:qsomaster:clip -->
+
+    <!-- TO BE CONFIRMED by Peter: feature list derived from the code (components and commits) -->
+    <ul class="features">
+      <li><strong>CW and RTTY decoder</strong><span>Reads Morse and RTTY from the sound card and shows the text on screen right away.</span></li>
+      <li><strong>Spectrum and waterfall</strong><span>An overview of the band, with S-meter and a tuning aid for RTTY.</span></li>
+      <li><strong>Transmit with F-keys</strong><span>Stored messages on the F-keys, with speed codes as in N1MM.</span></li>
+      <li><strong>Spots and band view</strong><span>See which stations are active, neatly shown per band.</span></li>
+      <li><strong>Compact QSO panel</strong><span>Call, RST and the rest of the contact filled in and logged quickly.</span></li>
+      <li><strong>Contest edition</strong><span>A separate edition with contest rules and voice messages for phone.</span></li>
+    </ul>
+
+    <!-- MEDIA:qsomaster:gallery -->
+    <div class="gallery"><div class="clip--empty" style="border-radius:10px;aspect-ratio:16/10">Screenshots coming soon</div></div>
+    <!-- /MEDIA:qsomaster:gallery -->
+
+    <!-- MEDIA:qsomaster:youtube -->
+    <div class="yt yt--empty"><p>Demo video coming soon</p></div>
+    <!-- /MEDIA:qsomaster:youtube -->
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="mono">73 &amp; good DX!</p>
+    <p class="morse" aria-hidden="true">--... ...-- -.. . .--. -.-. .---- .--. --</p>
+    <p class="muted">© 2026 PC1PM</p>
+  </div>
+</footer>
+
+<script src="../js/media.js?v=20261119g" defer></script>
+</body>
+</html>
