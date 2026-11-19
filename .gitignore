@@ -1,0 +1,12 @@
+# Originele foto's (groot, kunnen GPS/EXIF bevatten) – alleen img/web/ gaat mee
+img/*.jpg
+img/*.jpeg
+img/*.png
+!img/web/
+
+# Lokale/editor-bestanden
+.claude/settings.local.json
+__pycache__/
+Thumbs.db
+desktop.ini
+.DS_Store

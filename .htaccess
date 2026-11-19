@@ -1,0 +1,19 @@
+# pc1pm.nl – Apache-instellingen
+# Plesk zet de hele GitHub-repository in de websitemap. Werkbestanden die niet
+# bij de website horen, geven daarom een 404.
+
+RedirectMatch 404 ^/(\.[^/]+|tools)(/.*)?$
+RedirectMatch 404 ^/CLAUDE\.md$
+
+# Geen mappenoverzicht tonen
+Options -Indexes
+
+# Foto's, CSS en lettertypes een tijd in de browsercache bewaren
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Kort gehouden: foto's en CSS worden soms vervangen onder dezelfde naam
+  ExpiresByType image/jpeg "access plus 1 day"
+  ExpiresByType image/svg+xml "access plus 1 day"
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
