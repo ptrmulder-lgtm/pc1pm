@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261119b">
+  <link rel="stylesheet" href="css/style.css?v=20261119c">
 </head>
 <body>
 
@@ -203,6 +203,75 @@
       <div><h3>Zonnestormen</h3><p>Een uitbarsting op de zon kan de ionosfeer flink verstoren. Dan zijn de banden soms uren tot dagen nagenoeg dood.</p></div>
       <div><h3>Lange en korte weg</h3><p>Een signaal kan de kortste route nemen, maar soms is het juist via de andere kant van de aarde om, de "long path", beter te horen.</p></div>
     </div>
+
+    <div id="cijfers" class="numbers">
+      <h3 class="numbers__title">De cijfers uitgelegd</h3>
+      <p class="lead">In de ruimteweer-widget zie je een rij meetwaarden. Zo lees je ze. Kort gezegd: een <strong>hoge zonneflux</strong> is goed, een <strong>hoge Kp-index</strong> is slecht.</p>
+      <div class="modes">
+        <article class="mode-card">
+          <p class="mode-card__tag">SFI</p>
+          <p class="mode-card__name">Zonneflux · solar flux index</p>
+          <p>De hoeveelheid radiostraling van de zon op 10,7 cm golflengte (2800 MHz), dagelijks gemeten in Canada. Hoe meer straling, hoe sterker de ionosfeer en hoe hogere frequenties terugkaatsen.</p>
+          <p class="rule"><span class="rule--poor">&lt; 80 laag</span><span class="rule--fair">80–120 redelijk</span><span class="rule--good">&gt; 120 goed</span></p>
+          <p class="rule-text">Hoger is beter. Boven de 150 gaan 15, 12 en 10 m overdag wijd open.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">SSN</p>
+          <p class="mode-card__name">Zonnevlekkengetal · sunspot number</p>
+          <p>Het aantal zonnevlekken en vlekkengroepen op de zon. Vlekken zijn actieve gebieden; hoe meer er zijn, hoe actiever de zon. Het getal loopt op en af met de zonnecyclus van ongeveer 11 jaar.</p>
+          <p class="rule"><span class="rule--poor">0–50 rustige zon</span><span class="rule--fair">50–100</span><span class="rule--good">&gt; 100 actief</span></p>
+          <p class="rule-text">Hoger is beter. Gaat meestal gelijk op met de zonneflux.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">Kp</p>
+          <p class="mode-card__name">Kp-index · geomagnetische onrust</p>
+          <p>Hoe onrustig het aardmagnetisch veld is, op een schaal van 0 tot 9, berekend per drie uur uit metingen over de hele wereld. Een onrustig veld verstoort de ionosfeer: signalen worden zwakker en gaan "fladderen", vooral op routes over de polen.</p>
+          <p class="rule"><span class="rule--good">0–2 rustig</span><span class="rule--fair">3–4 onrustig</span><span class="rule--poor">5–9 storm</span></p>
+          <p class="rule-text">Lager is beter. Bij Kp 5 of meer is er een geomagnetische storm, soms met noorderlicht tot in Nederland.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">A</p>
+          <p class="mode-card__name">A-index · daggemiddelde</p>
+          <p>Hetzelfde idee als de Kp-index, maar dan als gemiddelde over een hele dag en op een gewone (lineaire) schaal van 0 tot 400. Handig om te zien of het een rustige of onrustige dag was.</p>
+          <p class="rule"><span class="rule--good">&lt; 8 rustig</span><span class="rule--fair">8–29 onrustig</span><span class="rule--poor">≥ 30 storm</span></p>
+          <p class="rule-text">Lager is beter.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">X-ray</p>
+          <p class="mode-card__name">Röntgenstraling · zonnevlammen</p>
+          <p>Röntgenstraling van de zon, gemeten door GOES-satellieten. De klassen A, B, C, M en X zijn telkens tien keer sterker. Bij een M- of X-vlam kan de HF aan de daglichtkant van de aarde binnen enkele minuten wegvallen, de zogeheten radio blackout.</p>
+          <p class="rule"><span class="rule--good">A–B rustig</span><span class="rule--fair">C normaal</span><span class="rule--poor">M–X vlam</span></p>
+          <p class="rule-text">Lager is beter. Een blackout duurt meestal minuten tot een paar uur.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">km/s</p>
+          <p class="mode-card__name">Zonnewind · snelheid</p>
+          <p>De zon blaast voortdurend een stroom geladen deeltjes de ruimte in, normaal met 300 tot 500 km/s. Een snelle stroom of een uitbarsting (CME) zet het aardmagnetisch veld onder druk, vaak een voorbode van een hogere Kp.</p>
+          <p class="rule"><span class="rule--good">&lt; 450 normaal</span><span class="rule--fair">450–600</span><span class="rule--poor">&gt; 600 snel</span></p>
+          <p class="rule-text">Lager is rustiger.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">Bz / Bt</p>
+          <p class="mode-card__name">Magnetisch veld van de zonnewind</p>
+          <p>Bt is de totale sterkte van het magnetisch veld dat de zonnewind meeneemt, in nanotesla (nT). Bz is de noord-zuidrichting. Wijst Bz naar het zuiden (negatief), dan "koppelt" het aan het aardmagnetisch veld en kan er energie binnenstromen.</p>
+          <p class="rule"><span class="rule--good">Bz positief</span><span class="rule--fair">0 tot −10</span><span class="rule--poor">&lt; −10 nT</span></p>
+          <p class="rule-text">Een urenlang sterk negatieve Bz is de klassieke aanloop naar een storm.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">R · S · G</p>
+          <p class="mode-card__name">NOAA-schalen</p>
+          <p>Drie schalen van 0 tot 5 voor ruimteweer, zoals de schaal van Beaufort voor wind. <strong>R</strong> staat voor radio blackouts door zonnevlammen, <strong>S</strong> voor stralingsstormen (snelle protonen, die vooral poolroutes dempen) en <strong>G</strong> voor geomagnetische stormen (hangt samen met de Kp).</p>
+          <p class="rule"><span class="rule--good">0 niets</span><span class="rule--fair">1–2 licht</span><span class="rule--poor">3–5 zwaar</span></p>
+          <p class="rule-text">Overal 0 is het mooiste.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">Goed?</p>
+          <p class="mode-card__name">De bandcondities in de widget</p>
+          <p>De tabel met Goed, Matig en Slecht per band is een <strong>schatting</strong> die ik zelf maak uit de zonneflux en de Kp-index, voor verbindingen vanuit Europa. Het is een vuistregel, geen garantie. Juist de verrassingen maken de hobby leuk.</p>
+          <p class="rule-text">Wil je zien wat er echt doorkomt? Kijk dan naar het Reverse Beacon Network verderop.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- ONVOORSPELBAAR -->
@@ -229,7 +298,7 @@
     <p class="kicker">07 · Nu in de lucht</p>
     <h2>Condities &amp; activiteit</h2>
     <p class="lead">Zo staan de banden er op dit moment voor, en hier pikte het Reverse Beacon Network mijn signaal op.</p>
-    <div class="sw" data-sw data-map="img/web/world-land.svg">
+    <div class="sw" data-sw data-map="img/web/world-land.svg" data-help="#cijfers">
       <p class="muted">Live ruimteweer van NOAA wordt geladen… (JavaScript nodig)</p>
     </div>
     <div class="live live--single">
@@ -263,6 +332,6 @@
   </div>
 </footer>
 
-<script src="js/spaceweather.js?v=20261119b" defer></script>
+<script src="js/spaceweather.js?v=20261119c" defer></script>
 </body>
 </html>

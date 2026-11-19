@@ -50,7 +50,8 @@
       dayHere: "In Nederland is het nu dag",
       nightHere: "In Nederland is het nu nacht",
       sun: "Zon in het zenit",
-      kmS: "km/s"
+      kmS: "km/s",
+      help: "Wat betekenen deze cijfers? →"
     },
     en: {
       title: "Space weather & propagation",
@@ -91,7 +92,8 @@
       dayHere: "It is daytime in the Netherlands",
       nightHere: "It is night-time in the Netherlands",
       sun: "Subsolar point",
-      kmS: "km/s"
+      kmS: "km/s",
+      help: "What do these numbers mean? →"
     }
   };
 
@@ -263,6 +265,7 @@
     var lang = (document.documentElement.lang || "nl").slice(0, 2) === "en" ? "en" : "nl";
     var t = T[lang];
     var mapSrc = root.getAttribute("data-map") || "img/web/world-land.svg";
+    var helpHref = root.getAttribute("data-help");
 
     root.innerHTML =
       '<div class="sw-head">' +
@@ -293,7 +296,8 @@
           '<p class="sw-note">' + t.bandNote + "</p>" +
         "</div>" +
       "</div>" +
-      '<p class="sw-source"><a href="https://www.swpc.noaa.gov/" rel="noopener">' + t.source + "</a></p>";
+      '<p class="sw-source"><a href="https://www.swpc.noaa.gov/" rel="noopener">' + t.source + "</a>" +
+        (helpHref ? '<a class="sw-help" href="' + helpHref + '">' + t.help + "</a>" : "") + "</p>";
 
     function tile(key, label, sub) {
       return '<div class="sw-tile" data-tile="' + key + '"><p class="sw-label">' + label + (sub ? " <span>· " + sub + "</span>" : "") +

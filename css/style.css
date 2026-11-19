@@ -329,3 +329,15 @@ figcaption { color: var(--muted); font-size: .9rem; margin-top: 10px; }
   .sw-tiles { grid-template-columns: repeat(2, 1fr); }
   .sw-value { font-size: 1.25rem; }
 }
+
+/* ---------- uitleg cijfers (hobbypagina, sectie propagatie) ---------- */
+.numbers { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); scroll-margin-top: 80px; }
+.numbers__title { font-size: clamp(1.4rem, 2.6vw, 1.8rem); font-weight: 600; margin-bottom: .5em; }
+.numbers .mode-card__tag { font-size: 1.25rem; }
+.rule { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 8px !important; }
+.rule span { font: 600 .74rem var(--mono); padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.rule--good { background: rgba(63,185,80,.15); color: #3fb950; }
+.rule--fair { background: rgba(245,165,36,.15); color: #f5a524; }
+.rule--poor { background: rgba(229,83,75,.14); color: #e5534b; }
+.rule-text { color: var(--muted) !important; font-size: .88rem !important; }
+.sw-help { margin-left: 12px; }

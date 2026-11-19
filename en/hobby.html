@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=20261119b">
+  <link rel="stylesheet" href="../css/style.css?v=20261119c">
 </head>
 <body>
 
@@ -203,6 +203,75 @@
       <div><h3>Solar storms</h3><p>An eruption on the sun can seriously disturb the ionosphere. The bands can then be practically dead for hours or even days.</p></div>
       <div><h3>Long and short path</h3><p>A signal can take the shortest route, but sometimes it is heard better the other way around the globe: the "long path".</p></div>
     </div>
+
+    <div id="numbers" class="numbers">
+      <h3 class="numbers__title">The numbers explained</h3>
+      <p class="lead">The space weather widget shows a row of measurements. Here is how to read them. In short: a <strong>high solar flux</strong> is good, a <strong>high Kp index</strong> is bad.</p>
+      <div class="modes">
+        <article class="mode-card">
+          <p class="mode-card__tag">SFI</p>
+          <p class="mode-card__name">Solar flux index</p>
+          <p>The amount of radio emission from the sun at 10.7 cm wavelength (2800 MHz), measured daily in Canada. More radiation means a stronger ionosphere, so higher frequencies are reflected.</p>
+          <p class="rule"><span class="rule--poor">&lt; 80 low</span><span class="rule--fair">80–120 fair</span><span class="rule--good">&gt; 120 good</span></p>
+          <p class="rule-text">Higher is better. Above 150, 15, 12 and 10 m open wide during the day.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">SSN</p>
+          <p class="mode-card__name">Sunspot number</p>
+          <p>The number of sunspots and sunspot groups on the sun. Spots are active regions; the more there are, the more active the sun. The number rises and falls with the roughly 11-year solar cycle.</p>
+          <p class="rule"><span class="rule--poor">0–50 quiet sun</span><span class="rule--fair">50–100</span><span class="rule--good">&gt; 100 active</span></p>
+          <p class="rule-text">Higher is better. Usually moves together with the solar flux.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">Kp</p>
+          <p class="mode-card__name">Kp index · geomagnetic activity</p>
+          <p>How disturbed the earth's magnetic field is, on a scale of 0 to 9, calculated every three hours from measurements around the world. A disturbed field upsets the ionosphere: signals get weaker and start to "flutter", especially on paths over the poles.</p>
+          <p class="rule"><span class="rule--good">0–2 quiet</span><span class="rule--fair">3–4 unsettled</span><span class="rule--poor">5–9 storm</span></p>
+          <p class="rule-text">Lower is better. At Kp 5 or more there is a geomagnetic storm, sometimes with aurora visible as far south as the Netherlands.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">A</p>
+          <p class="mode-card__name">A index · daily average</p>
+          <p>The same idea as the Kp index, but as an average over a whole day on an ordinary (linear) scale from 0 to 400. Useful to see whether it was a quiet or a disturbed day.</p>
+          <p class="rule"><span class="rule--good">&lt; 8 quiet</span><span class="rule--fair">8–29 unsettled</span><span class="rule--poor">≥ 30 storm</span></p>
+          <p class="rule-text">Lower is better.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">X-ray</p>
+          <p class="mode-card__name">X-rays · solar flares</p>
+          <p>X-ray emission from the sun, measured by GOES satellites. The classes A, B, C, M and X are each ten times stronger than the previous one. An M or X flare can wipe out HF on the daylight side of the earth within minutes: a radio blackout.</p>
+          <p class="rule"><span class="rule--good">A–B quiet</span><span class="rule--fair">C normal</span><span class="rule--poor">M–X flare</span></p>
+          <p class="rule-text">Lower is better. A blackout usually lasts minutes to a few hours.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">km/s</p>
+          <p class="mode-card__name">Solar wind · speed</p>
+          <p>The sun constantly blows a stream of charged particles into space, normally at 300 to 500 km/s. A fast stream or an eruption (CME) puts pressure on the earth's magnetic field, often a sign that the Kp is about to rise.</p>
+          <p class="rule"><span class="rule--good">&lt; 450 normal</span><span class="rule--fair">450–600</span><span class="rule--poor">&gt; 600 fast</span></p>
+          <p class="rule-text">Lower is calmer.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">Bz / Bt</p>
+          <p class="mode-card__name">Magnetic field of the solar wind</p>
+          <p>Bt is the total strength of the magnetic field carried by the solar wind, in nanotesla (nT). Bz is its north–south direction. When Bz points south (negative), it "connects" with the earth's magnetic field and energy can pour in.</p>
+          <p class="rule"><span class="rule--good">Bz positive</span><span class="rule--fair">0 to −10</span><span class="rule--poor">&lt; −10 nT</span></p>
+          <p class="rule-text">A strongly negative Bz that lasts for hours is the classic run-up to a storm.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">R · S · G</p>
+          <p class="mode-card__name">NOAA scales</p>
+          <p>Three scales from 0 to 5 for space weather, like the Beaufort scale for wind. <strong>R</strong> is for radio blackouts caused by flares, <strong>S</strong> for solar radiation storms (fast protons that mainly dampen polar paths) and <strong>G</strong> for geomagnetic storms (linked to the Kp).</p>
+          <p class="rule"><span class="rule--good">0 none</span><span class="rule--fair">1–2 minor</span><span class="rule--poor">3–5 severe</span></p>
+          <p class="rule-text">All zeros is what you want.</p>
+        </article>
+        <article class="mode-card">
+          <p class="mode-card__tag">Good?</p>
+          <p class="mode-card__name">The band conditions in the widget</p>
+          <p>The table with Good, Fair and Poor per band is an <strong>estimate</strong> I make myself from the solar flux and the Kp index, for contacts from Europe. It's a rule of thumb, not a guarantee. The surprises are exactly what makes the hobby fun.</p>
+          <p class="rule-text">Want to see what actually gets through? Check the Reverse Beacon Network further down.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- UNPREDICTABLE -->
@@ -229,7 +298,7 @@
     <p class="kicker">07 · On the air now</p>
     <h2>Conditions &amp; activity</h2>
     <p class="lead">This is how the bands look right now, and where the Reverse Beacon Network picked up my signal.</p>
-    <div class="sw" data-sw data-map="../img/web/world-land.svg">
+    <div class="sw" data-sw data-map="../img/web/world-land.svg" data-help="#numbers">
       <p class="muted">Loading live space weather from NOAA… (JavaScript required)</p>
     </div>
     <div class="live live--single">
@@ -263,6 +332,6 @@
   </div>
 </footer>
 
-<script src="../js/spaceweather.js?v=20261119b" defer></script>
+<script src="../js/spaceweather.js?v=20261119c" defer></script>
 </body>
 </html>
