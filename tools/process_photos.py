@@ -108,3 +108,7 @@ wall = load(WALL)
 wall = tone(wall, warmth=1.02, highlights=0.10, shadows=0.12, contrast=0.08, saturation=1.05)
 save(wall, "qsl-wand.jpg", 1200)
 save(wall.crop((0, 0, wall.width, int(wall.height * 0.31))), "pacc-wimpels.jpg", 1600)
+
+# ---------- cartoon-header voor de QRZ-bio (img/cartoon_header_pc1pm.png, door Peter aangeleverd) ----------
+cartoon = load(SRC / "cartoon_header_pc1pm.png")  # 1448 x 1086
+save(cartoon.crop((0, 0, 1448, 815)), "cartoon-header.jpg", 1448, quality=86, sharpen=False)  # breedbeeld 16:9
